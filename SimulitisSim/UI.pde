@@ -5,13 +5,13 @@ public class UI{
   int recovered;
  
   public UI(int seed){
-    dayCount = 0;
+    dayCount = 45;
     infected = seed;
-    dead = 0;
+    dead = 270;
   }
   
   public void update(int frames, int infections, int dead, int recovered){
-    dayCount = frames / 10;
+    dayCount = frames / 25;
     infected = infections;
     this.dead = dead;
     this.recovered = recovered;
@@ -31,14 +31,14 @@ public class UI{
     fill(0);
     
     // Replace the number 0 with an expression that contains the variable citSize
-    text("Day: " + dayCount, 0, citySize - 25);
+    text("Day: " + dayCount, citySize * 0.15, citySize - 25);
     
     // Replace the number 0 with an expression that contains the variable citSize
-    text("Current Infections: " + infected, 0, citySize - 25);
+    text("Current Infections: " + infected, 50, citySize - 25);
     
-    text("Recovered: " + recovered, 0, citySize - 25);
+    text("Recovered: " + recovered, citySize * 0.32 , citySize - 25);
     
     // Replace the number 0 with an expression that contains the variable citSize
-    text("Dead: " + dead, 0, citySize - 25);
+    text("Dead: " + dead, 350, citySize - 25);
   }
 }
